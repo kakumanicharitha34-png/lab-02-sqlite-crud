@@ -6,6 +6,25 @@ const path = require("path");
 
 const app = express();
 app.use(express.json());
+// Home page
+app.get("/", (req, res) => {
+  res.send(`
+    <h1>Books Management API</h1>
+    <p>Welcome to the Books Management System!</p>
+
+    <h3>Server is running successfully.</h3>
+
+    <h3>Available API Endpoints</h3>
+
+    <ul>
+      <li>GET /books/ - Get all books</li>
+      <li>GET /books/:bookId/ - Get a book by ID</li>
+      <li>POST /books/ - Add a new book</li>
+      <li>PUT /books/:bookId/ - Update a book</li>
+      <li>DELETE /books/:bookId/ - Delete a book</li>
+    </ul>
+  `);
+});
 
 
 const dbPath = path.join(__dirname, "database.db");
