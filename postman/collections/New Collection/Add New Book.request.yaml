@@ -1,0 +1,18 @@
+$kind: http-request
+description: ""
+url: http://localhost:3000/books/
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"title\": \"Advanced Python\",\r
+
+    \  \"author\": \"Charitha\",\r
+
+    \  \"price\": 700,\r
+
+    \  \"pages\": 500\r
+
+    }"
+order: 3000
